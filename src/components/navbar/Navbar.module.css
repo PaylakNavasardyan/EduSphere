@@ -1,0 +1,90 @@
+.navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbarLogo {
+    display: flex;
+    span {
+        font-family: 'exo-semiBold';
+        font-size: larger;
+    }
+}
+
+.navbarLinks {
+    display: flex;
+    gap: 20px; 
+    .navbarLink {
+        text-decoration: none;
+        font-family: 'exo-regular';
+        color: var(--Black)
+    }
+    .navbarLink:hover {
+        color: var(--Hover)
+    }
+   
+    .navbarActiveLink {
+        text-decoration: none;
+        font-family: 'exo-regular';
+        color: var(--Pressed)
+    }
+    
+    .menuIcon {
+        fill: var(--Black);
+        cursor: pointer;
+    }
+    .menuIcon:hover {
+        fill: var(--Hover)
+    }
+
+    .menuIconRotated {
+        fill: var(--Pressed);
+        cursor: pointer;
+        rotate: 90deg
+    }
+    .menuIconRotated:hover {
+        fill: var(--Hover)
+    }
+
+    .navbarBurgerMenu {
+        display: none;
+    }
+}
+
+.navbarBurger {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .navbarLogo {
+        margin-bottom: 20px;
+    }
+    .navbarLinks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .navbarLink{
+            display: block;
+        }
+        .navbarBurgerMenu {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbarLinks {
+        .navbarLink {
+            display: none;
+        }
+        .navbarBurgerMenu {
+            display: block;
+        }
+    }
+}

@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(30px);
 }
 
 .navbarLogo {
@@ -62,6 +66,8 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
+    position: fixed;
+    background-color: var(--White);
     .navbarLogo {
         margin-bottom: 20px;
     }

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --Default: #FF782D;
   --Hover: #FFAB2D;

@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { FC, useState, useEffect } from "react"
 import classes from "./Navbar.module.css"
 import image from "../../ExportImages"
 import { Link, useLocation } from "react-router-dom"
@@ -14,6 +14,14 @@ const Navbar:FC = () => {
   const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
   const location = useLocation();
 
+  useEffect(() => {
+    if (isOpenMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [isOpenMenu]);
+  
   const handleBurgerMenu = (): void => {
     setIsOpenMenu(!isOpenMenu);
   };

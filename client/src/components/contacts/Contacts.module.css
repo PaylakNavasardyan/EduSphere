@@ -12,9 +12,9 @@
     height: 700px;
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--Gray);
+    border: 1px solid var(--Info);
     border-radius: 10px;
-    box-shadow: inset 0 0 10px var(--Black);
+    box-shadow: inset 0 0 15px var(--Info);
     .containerGuide {
         width: 100%;
         height: auto;
@@ -86,21 +86,21 @@
     align-items: end;
     justify-content: center;
     button {
-        width: 120px;
-        height: 30px;
+        width: 150px;
+        height: 35px;
         border-radius: 8px;
         border: none;
         cursor: pointer;
         font-family: 'exo-semiBold';
-        box-shadow: inset 0 0 10px var(--Black);
+        box-shadow: inset 0 0 10px var(--Info);
     }
     button:hover {
         box-shadow: inset 0 0 10px var(--Hover);
         color: var(--Pressed);
     }
     button:focus {
-        box-shadow: inset 0 0 10px var(--Pressed);
-        color: var(--Danger);
+        box-shadow: inset 0 0 10px var(--Success);
+        color: var(--Success);
     }
 }
 

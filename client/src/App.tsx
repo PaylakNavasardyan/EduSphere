@@ -5,6 +5,7 @@ import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Courses from './components/courses/Courses';
 import Teachers from './components/teachers/Teachers';
+import Contacts from './components/contacts/Contacts';
 import ScrollToTop from './ScrollToTop';
 
 function App() {
@@ -33,6 +34,14 @@ function App() {
           <>
             <Navbar />
             <Teachers />
+            <Footer />
+          </>
+        } />
+
+        <Route path={'/Contacts'} element = {
+          <>
+            <Navbar />
+            <Contacts />
             <Footer />
           </>
         } />

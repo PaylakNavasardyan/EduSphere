@@ -89,3 +89,72 @@
         }
     }
 }
+
+@media screen and (max-width: 1040px) {
+    .teachersData {
+        .teachersDataSegment {
+            .teachersName {
+                font-size: 15px;
+            }
+            .teachersProfession {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .teachersTeam {
+        grid-template-columns: auto auto;
+    }
+    .teachersData {
+        .teachersDataSegment {
+            .teachersName {
+                font-size: 18px;
+            }
+            .teachersProfession {
+                font-size: 16px;
+            }
+        }
+    }
+    .teachersGuide {
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .teachersTeam {
+        grid-template-columns: auto;
+    }
+    .teachersData {
+        .teachersDataSegment {
+            .teachersName {
+                font-size: 18px;
+            }
+            .teachersProfession {
+                font-size: 16px;
+            }
+        }
+    }
+    .teachersGuide {
+        h2 {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+        }
+    }
+}

@@ -69,6 +69,7 @@
                 color: var(--Hover);
             }
             a {
+                width: 80%;
                 text-decoration: none;
             }
         }
@@ -100,5 +101,50 @@
     button:focus {
         box-shadow: inset 0 0 10px var(--Pressed);
         color: var(--Danger);
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .contactsContainer {
+        .containerGuide {
+            h2 {
+                font-size: 40px;
+                letter-spacing: 3px;
+                font-family: 'exo-regular';
+                line-height: 1.5;
+            }
+        }
+    }
+    .contactsButton {
+    height: 150px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .contactsContainer {
+        width: 60%;
+        .containerGuide {
+            h2 {
+                font-size: 40px;
+                letter-spacing: 3px;
+                font-family: 'exo-regular';
+                line-height: 1.5;
+            }
+        }
+    }
+    .contactsButton {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .contactsContainer {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .contactsContainer {
+        width: 90%;
     }
 }

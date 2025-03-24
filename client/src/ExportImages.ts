@@ -9,7 +9,15 @@ import finance from './assets/finance.svg';
 import network from './assets/network.svg';
 import science from './assets/science.svg';
 import videography from './assets/videography.svg';
- 
+import teacherone from './assets/teacherone.svg';
+import teachertwo from './assets/teachertwo.svg';
+import teacherthree from './assets/teacherthree.svg';
+import teacherfour from './assets/teacherfour.svg';
+import teacherfive from './assets/teacherfive.svg';
+import teachersix from './assets/teachersix.svg';
+import teacherseven from './assets/teacherseven.svg';
+import teachereight from './assets/teachereight.svg';
+
 export default {
     logo,
     mainimage,
@@ -22,4 +30,12 @@ export default {
     network,
     science,
     videography,
+    teacherone,
+    teachertwo,
+    teacherthree,
+    teacherfour,
+    teacherfive,
+    teachersix,
+    teacherseven,
+    teachereight
 }

@@ -1,0 +1,91 @@
+.teachers {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 100px 0 50px 0;
+}
+
+.teachersGuide {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 2px;
+    margin-bottom: 50px;
+    h2 {
+        font-family: 'exo-medium';
+    }
+    h3 {
+        font-family: 'exo-semiBold';
+        color: var(--DarkGray);
+    }
+    p {
+        font-family: 'exo-regular';
+        color: var(--Gray);
+        font-size: large;
+    }
+}
+
+.teachersTeam {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.teachersData {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--Gray);
+    border-radius: 8px;
+    img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    img:hover {
+        transform: scale(1.1);
+    }
+    .teachersDataSegment {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        padding-left: 5px;
+        margin-top: 20px;
+        .teachersName {
+            font-family: 'exo-semiBold';
+            color: var(--DarkGray);
+        }
+        .teachersProfession {
+            font-family: 'exo-regular';
+            color: var(--Gray);
+            font-size: large;
+        }
+        .teachersSocial {
+            width: 100%;
+            height: auto;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            a {
+                color: var(--Gray);
+            }
+            a:hover {
+                color: var(--Hover);
+            }
+            a:focus {
+                color: var(--Pressed);
+            }
+        }
+    }
+}

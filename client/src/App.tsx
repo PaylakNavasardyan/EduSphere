@@ -4,6 +4,7 @@ import Navbar  from "./components/navbar/Navbar";
 import Home from './components/home/Home';
 import Footer from './components/footer/Footer';
 import Courses from './components/courses/Courses';
+import Teachers from './components/teachers/Teachers';
 import ScrollToTop from './ScrollToTop';
 
 function App() {
@@ -28,6 +29,13 @@ function App() {
           </>
         }/>
         
+        <Route path={'/Teachers'} element = {
+          <>
+            <Navbar />
+            <Teachers />
+            <Footer />
+          </>
+        } />
       </Routes>
     </div>
   );

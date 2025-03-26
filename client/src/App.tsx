@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Courses from './components/courses/Courses';
 import Teachers from './components/teachers/Teachers';
 import Contacts from './components/contacts/Contacts';
+import Registration from './components/registration/Registration';
 import ScrollToTop from './ScrollToTop';
 
 function App() {
@@ -42,6 +43,14 @@ function App() {
           <>
             <Navbar />
             <Contacts />
+            <Footer />
+          </>
+        } />
+
+        <Route path={'/Registration'} element = {
+          <>
+            <Navbar />
+            <Registration />
             <Footer />
           </>
         } />

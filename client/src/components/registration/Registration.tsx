@@ -12,34 +12,46 @@ const Registration:FC = () => {
         setSelected(event.target.id); 
     };
     
-    const handleSubmit = (e: any): void => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
         e.preventDefault();
-
+        
+        if (!name.trim()) {
+            alert('Please fill in your full name');
+            return;
+        }
+    
+        const checkedName = name.trim().split(/\s+/);
+        if (checkedName.length < 2) {
+            alert('Please enter your full name (first and last)');
+            return;
+        }
+    
+        const emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const trimmedEmail = email.trim();
+        const checkedEmail = emailCheck.test(trimmedEmail)
+        if (!trimmedEmail || !checkedEmail) {
+            alert('Please fill in your email again');
+            return;
+        }
+    
+        if (!selected) {
+            alert('Please select a course');
+            return;
+        }
+           
         try {
-            if (!name || !email) {
-                alert('Please fill in the required fields');
-                setName('');
-                setEmail('');
-                setArea('');
-
-                return;
-            } else if (!selected) {
-                alert('Please select a course');
-
-                return;
-            };
-
             document.cookie = `course=${selected}; path=/;`;
             document.cookie = `name=${name}; path=/;`;
             document.cookie = `email=${email}; path=/;`;
             document.cookie = `area=${area}; path=/;`;
-        } catch(error) {
-            console.log('error', error)
+            
+            setName('');
+            setEmail('');
+            setArea('');
+            setSelected(null);
+        } catch (error) {
+            console.log('Error:', error);
         }
-
-        setName('');
-        setEmail('');
-        setArea('');
     };
 
   return (
@@ -154,7 +166,6 @@ const Registration:FC = () => {
                 <button type="submit">Send</button>
             </div>
         </form>
-
     </div>
   )
 }

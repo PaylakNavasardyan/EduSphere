@@ -5,6 +5,12 @@ import { CiFacebook, CiLinkedin, CiInstagram } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import type { IconBaseProps } from "react-icons";
 import { courseArr } from '../courses/Course';
+import { Helmet } from 'react-helmet-async';
+
+<Helmet>
+  <meta name="description" content="Meet our experienced and dedicated teachers guiding you through each course." />
+  <meta name="keywords" content="teachers, instructors, education staff, mentors" />
+</Helmet>
 
 const FacebookIcon: FC<IconBaseProps> = (props) => {
   const IconComponent = CiFacebook as React.ComponentType<IconBaseProps>;

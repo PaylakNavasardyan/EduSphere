@@ -4,6 +4,12 @@ import { CiPhone, CiLocationOn } from "react-icons/ci";
 import { BiLogoGmail } from "react-icons/bi";
 import type { IconBaseProps } from "react-icons";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+<Helmet>
+  <meta name="description" content="Get in touch with EduSphere for support, inquiries, or collaboration opportunities." />
+  <meta name="keywords" content="contact, support, education help, email, phone" />
+</Helmet>
 
 const PhoneIcon: FC<IconBaseProps> = (props) => {
   const IconComponent = CiPhone as React.ComponentType<IconBaseProps>;

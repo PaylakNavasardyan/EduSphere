@@ -1,6 +1,12 @@
 import { FC, useState } from 'react';
 import classes from './Registration.module.css';
 import { courseArr } from '../courses/Course';
+import { Helmet } from 'react-helmet-async';
+
+<Helmet>
+  <meta name="description" content="Register on EduSphere to access top-quality courses and track your learning progress." />
+  <meta name="keywords" content="register, sign up, student registration, join, education platform" />
+</Helmet>
 
 const Registration:FC = () => {
     const [selected, setSelected] = useState<string | null>(null);

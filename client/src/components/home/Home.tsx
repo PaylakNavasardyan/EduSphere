@@ -2,6 +2,12 @@ import { FC } from 'react'
 import image from '../../ExportImages';
 import classes from './Home.module.css';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+
+<Helmet>
+  <meta name="description" content="Welcome to EduSphere – your hub for quality online education and courses." />
+  <meta name="keywords" content="education, online learning, edusphere, courses, teachers" />
+</Helmet>
 
 const Home:FC = () => {
   return (

@@ -1,6 +1,12 @@
 import { FC, useMemo, useState } from 'react';
 import classes from './Courses.module.css';
 import { courseArr, CourseSources } from './Course';
+import { Helmet } from 'react-helmet-async';
+
+<Helmet>
+  <meta name="description" content="Browse a variety of courses taught by professional educators on EduSphere." />
+  <meta name="keywords" content="online courses, subjects, classes, edusphere, learning" />
+</Helmet>
 
 const getFilterCources = (courseArr: CourseSources[], search: string) => {
     if (!search) {

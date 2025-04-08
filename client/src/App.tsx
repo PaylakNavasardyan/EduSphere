@@ -13,48 +13,31 @@ function App() {
   return (
     <div className="App">
       <ScrollToTop />
-      
+
+      <Navbar />
       <Routes>
         <Route path={'/'} element = {
-          <>
-            <Navbar />
-            <Home />
-            <Footer />
-          </>
+          <Home />
         }/>
         
         <Route path={'/Courses'} element = {
-          <>
-            <Navbar />
-            <Courses />
-            <Footer />
-          </>
+          <Courses />
         }/>
         
         <Route path={'/Teachers'} element = {
-          <>
-            <Navbar />
-            <Teachers />
-            <Footer />
-          </>
+          <Teachers />
         } />
 
         <Route path={'/Contacts'} element = {
-          <>
-            <Navbar />
-            <Contacts />
-            <Footer />
-          </>
+          <Contacts />
         } />
 
         <Route path={'/Registration'} element = {
-          <>
-            <Navbar />
-            <Registration />
-            <Footer />
-          </>
+          <Registration />
         } />
       </Routes>
+      <Footer />
+
     </div>
   );
 }

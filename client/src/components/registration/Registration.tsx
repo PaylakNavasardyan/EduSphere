@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import classes from './Registration.module.css';
 import { courseArr } from '../courses/Course';
 import { Helmet } from 'react-helmet-async';
+import { Payloades } from './RegTypes';
 
 <Helmet>
   <meta name="description" content="Register on EduSphere to access top-quality courses and track your learning progress." />
@@ -18,7 +19,7 @@ const Registration:FC = () => {
         setSelected(event.target.id); 
     };
     
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
         if (!name.trim()) {
@@ -44,13 +45,30 @@ const Registration:FC = () => {
             alert('Please select a course');
             return;
         }
+
+        const payload : Payloades = {
+            name,
+            email,
+            area: area || '',
+            course: selected
+        }
            
         try {
-            document.cookie = `course=${selected}; path=/;`;
             document.cookie = `name=${name}; path=/;`;
             document.cookie = `email=${email}; path=/;`;
+            document.cookie = `course=${selected}; path=/;`;
             document.cookie = `area=${area}; path=/;`;
-            
+
+            console.log('sending datas', payload)
+     
+            await fetch('http://localhost:5000/Registration', {
+                method: 'POST',
+                headers: { 
+                    'Content-Type': 'application/json' 
+                },
+                body: JSON.stringify(payload)
+            });             
+                     
             setName('');
             setEmail('');
             setArea('');

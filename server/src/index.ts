@@ -1,7 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
- 
+import { Request, Response } from 'express';
+
 dotenv.config(); 
 
 const app = express();
@@ -10,16 +11,23 @@ const PORT = process.env.PORT || 5050;
 app.use(express.json());
 app.use(cors());
 
-let lastRegData: any = null;
+type RegDataType = {
+  name: string,
+  email: string,
+  area?: string | number,
+  course: string
+}
 
-app.get('/', (req, res) => {
+let lastRegData: RegDataType | null = null;
+
+app.get('/', (req : Request, res : Response) => {
   if (lastRegData) {
     res.send(lastRegData);
   } else res.send('There is no data')
 });
 
-app.post('/Registration', (req, res) => {
-  const { name, email, area, course } = req.body;
+app.post('/Registration', (req : Request, res : Response) => {
+  const { name, email, area, course } = req.body as RegDataType;
 
   if (name && email && course) {
     lastRegData = req.body

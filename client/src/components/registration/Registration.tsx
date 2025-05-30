@@ -67,8 +67,22 @@ const Registration:FC = () => {
                     'Content-Type': 'application/json' 
                 },
                 body: JSON.stringify(payload)
-            });             
-                     
+            });                              
+
+            const response = await fetch('http://localhost:5000/Registration');
+            const data = await response.json();
+            console.log('status information', data);
+         
+            if (data.status === '200') {
+                setTimeout(() => {
+                    alert('Congratulations, you have successfully registered in')
+                }, 1000);
+            } else if (data.status === '400') {
+                setTimeout(() => {
+                    alert('Something went wrong, please try again later!')
+                }, 1000);
+            };
+
             setName('');
             setEmail('');
             setArea('');

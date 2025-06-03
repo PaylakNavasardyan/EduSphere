@@ -72,12 +72,62 @@ const Registration:FC = () => {
             const response = await fetch('http://localhost:5000/Registration');
             const data = await response.json();
             console.log('status information', data);
-         
-            if (data.status === '200') {
-                setTimeout(() => {
-                    alert('Congratulations, you have successfully registered in')
-                }, 1000);
-            } else if (data.status === '400') {
+            console.log('array', courseArr);            
+
+            switch (`${data.status}, ${selected}`) {
+                case '200, First Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[0].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Second Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[1].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Third Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[2].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Fourth Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[3].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Fifth Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[4].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Sixth Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[5].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Seventh Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[6].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Eight Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[7].name}`)
+                    }, 1000);     
+                    break;
+                case '200, Ninth Course Name':
+                    setTimeout(() => {
+                        alert(`Congratulations, you have successfully registered in ${courseArr[8].name}`)
+                    }, 1000);     
+                    break;
+                default:
+                    setTimeout(() => {
+                        alert('Something went wrong, please try again later!')
+                    }, 1000);
+                    break;
+            };
+
+            if (data.status === '400') {
                 setTimeout(() => {
                     alert('Something went wrong, please try again later!')
                 }, 1000);
